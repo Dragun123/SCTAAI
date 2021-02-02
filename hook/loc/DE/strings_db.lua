@@ -1,8 +1,8 @@
 
-MicroAI_0001="KI: Micro"
-MicroAI_0002="Eine ausbalancierte KI. Gut for 20x20+ Karten"
-MicroAI_0003="KIx: Micro"
-MicroAI_0004="Eine Sturm KI. Gut für 10x10 oder kleinere Karten."
+SctaAI_0001="KI: Scta"
+SctaAI_0002="Eine ausbalancierte KI. Gut for 20x20+ Karten"
+SctaAI_0003="KIx: Scta"
+SctaAI_0004="Eine Sturm KI. Gut für 10x10 oder kleinere Karten."
 
 -- Translation strings for your AI lobby options.
 aisettings_0200="Option 1"

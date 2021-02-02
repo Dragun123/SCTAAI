@@ -4,7 +4,7 @@ version = 2
 copyright = "FreeWare"
 description = "SCTA AI implementation."
 author = "relentless"
-url = "https://github.com/HardlySoftly/MicroAI"
+url = "https://github.com/relent0r/SCTAAI"
 icon = "/mods/SCTAAI/SCTAAI.jpg"
 selectable = true
 enabled = true
@@ -15,6 +15,6 @@ requiresNames = { }
 conflicts = { }
 before = { }
 after = { 
-    "SCTAFIX-AB75-22EA-A7CA-D6DA9300g8a9",
-    "SCTABALANCE-AB75-225f-5i47-b27h1c6636a9"
+    "SCTAFIX-AC75-22EA-A7CA-D6DA9300g8a9",
+    "SCTABALANCE-AC75-225f-5i47-b27h1c6636a9"
 }

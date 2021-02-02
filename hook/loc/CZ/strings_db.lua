@@ -1,8 +1,8 @@
 ﻿
-MicroAI_0001="AI: Micro"
-MicroAI_0002="A balanced AI. Good for 20x20+ maps."
-MicroAI_0003="AIx: Micro"
-MicroAI_0004="A rush AI. Good for 10x10 or smaller maps."
+SctaAI_0001="AI: Scta"
+SctaAI_0002="A balanced AI. Good for 20x20+ maps."
+SctaAI_0003="AIx: Scta"
+SctaAI_0004="A rush AI. Good for 10x10 or smaller maps."
 
 -- Translation strings for your AI lobby options.
 aisettings_0200="Option 1"

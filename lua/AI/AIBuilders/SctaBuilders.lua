@@ -1,9 +1,9 @@
 --[[
-    File    :   /lua/AI/AIBuilders/MicroBuilders.lua
-    Author  :   SoftNoob
+    File    :   /lua/AI/AIBuilders/SCTABuilders.lua
+    Author  :   relentless
     Summary :
-        All the builders that are used by MicroAI.
-        The keys for these builders are included AI/AIBaseTemplates/MicroAI.lua.
+        All the builders that are used by SCTAAI.
+        The keys for these builders are included AI/AIBaseTemplates/SCTAAI.lua.
 ]]
 
 local UCBC = '/lua/editor/UnitCountBuildConditions.lua'
@@ -43,13 +43,51 @@ BuilderGroup {
             }
         }
     },
+    Builder {
+        BuilderName = 'SCTAAI ACU T1Engineer Mex',
+        PlatoonTemplate = 'CommanderBuilder',
+        Priority = 100,
+        InstanceCount = 2, -- The max number concurrent instances of this builder.
+        BuilderConditions = { },
+        BuilderType = 'Any',
+        BuilderData = {
+            NeedGuard = false,
+            DesiresAssist = false,
+            Construction = {
+                FactionIndex = 6,
+                BuildStructures = {
+                    'T1Resource',
+                }
+            }
+        }
+    },
+    Builder {
+        BuilderName = 'SCTAAI ACU T1Engineer Pgen',
+        PlatoonTemplate = 'CommanderBuilder',
+        Priority = 90,
+        InstanceCount = 1,
+        BuilderConditions = {
+            { EBC, 'LessThanEconStorageRatio', { 1.1, 0.99}}, -- If less than full energy, build a pgen.
+        },
+        BuilderType = 'Any',
+        BuilderData = {
+            NeedGuard = false,
+            DesiresAssist = false,
+            Construction = {
+                FactionIndex = 6,
+                BuildStructures = {
+                    'T1EnergyProduction',
+                }
+            }
+        }
+    },
 }
 
 BuilderGroup {
-    BuilderGroupName = 'MicroAIEngineerBuilder',
+    BuilderGroupName = 'SCTAAIEngineerBuilder',
     BuildersType = 'EngineerBuilder',
     Builder {
-        BuilderName = 'MicroAI T1Engineer Mex',
+        BuilderName = 'SCTAAI T1Engineer Mex',
         PlatoonTemplate = 'EngineerBuilder',
         Priority = 100,
         InstanceCount = 2, -- The max number concurrent instances of this builder.
@@ -59,6 +97,7 @@ BuilderGroup {
             NeedGuard = false,
             DesiresAssist = false,
             Construction = {
+                FactionIndex = 6,
                 BuildStructures = {
                     'T1Resource',
                 }
@@ -66,7 +105,7 @@ BuilderGroup {
         }
     },
     Builder {
-        BuilderName = 'MicroAI T1Engineer Pgen',
+        BuilderName = 'SCTAAI T1Engineer Pgen',
         PlatoonTemplate = 'EngineerBuilder',
         Priority = 90,
         InstanceCount = 1,
@@ -78,6 +117,7 @@ BuilderGroup {
             NeedGuard = false,
             DesiresAssist = false,
             Construction = {
+                FactionIndex = 6,
                 BuildStructures = {
                     'T1EnergyProduction',
                 }
@@ -85,7 +125,7 @@ BuilderGroup {
         }
     },
     Builder {
-        BuilderName = 'MicroAI T1Engineer LandFac',
+        BuilderName = 'SCTAAI T1Engineer LandFac',
         PlatoonTemplate = 'EngineerBuilder',
         Priority = 95,
         InstanceCount = 1,
@@ -98,6 +138,7 @@ BuilderGroup {
             NeedGuard = false,
             DesiresAssist = true,
             Construction = {
+                FactionIndex = 6,
                 BuildStructures = {
                     'T1LandFactory',
                 }
@@ -105,7 +146,7 @@ BuilderGroup {
         }
     },
     Builder {
-        BuilderName = 'MicroAI T1Engineer AirFac',
+        BuilderName = 'SCTAAI T1Engineer AirFac',
         PlatoonTemplate = 'EngineerBuilder',
         Priority = 90,
         InstanceCount = 1,
@@ -119,6 +160,7 @@ BuilderGroup {
             NeedGuard = false,
             DesiresAssist = true,
             Construction = {
+                FactionIndex = 6,
                 BuildStructures = {
                     'T1AirFactory',
                 }
@@ -128,10 +170,10 @@ BuilderGroup {
 }
 
 BuilderGroup {
-    BuilderGroupName = 'MicroAILandBuilder',
+    BuilderGroupName = 'SCTAAILandBuilder',
     BuildersType = 'FactoryBuilder',
     Builder {
-        BuilderName = 'MicroAi Factory Engineer',
+        BuilderName = 'SCTAAi Factory Engineer',
         PlatoonTemplate = 'T1BuildEngineer',
         Priority = 100, -- Top factory priority
         BuilderConditions = {
@@ -140,7 +182,7 @@ BuilderGroup {
         BuilderType = 'All',
     },
     Builder {
-        BuilderName = 'MicroAi Factory Scout',
+        BuilderName = 'SCTAAi Factory Scout',
         PlatoonTemplate = 'T1LandScout',
         Priority = 90,
         BuilderConditions = {
@@ -150,7 +192,7 @@ BuilderGroup {
         BuilderType = 'All',
     },
     Builder {
-        BuilderName = 'MicroAi Factory Tank',
+        BuilderName = 'SCTAAi Factory Tank',
         PlatoonTemplate = 'T1LandDFTank',
         Priority = 80,
         BuilderConditions = {
@@ -160,14 +202,14 @@ BuilderGroup {
         BuilderType = 'All',
     },
     Builder {
-        BuilderName = 'MicroAi Factory Artillery',
+        BuilderName = 'SCTAAi Factory Artillery',
         PlatoonTemplate = 'T1LandArtillery',
         Priority = 70,
         BuilderConditions = { },
         BuilderType = 'All',
     },
     Builder {
-        BuilderName = 'MicroAi Factory AntiAir',
+        BuilderName = 'SCTAAi Factory AntiAir',
         PlatoonTemplate = 'T1LandAA',
         Priority = 110,
         BuilderConditions = {
@@ -180,10 +222,10 @@ BuilderGroup {
 }
 
 BuilderGroup {
-    BuilderGroupName = 'MicroAIAirBuilder',
+    BuilderGroupName = 'SCTAAIAirBuilder',
     BuildersType = 'FactoryBuilder',
     Builder {
-        BuilderName = 'MicroAI Factory Bomber',
+        BuilderName = 'SCTAAI Factory Bomber',
         PlatoonTemplate = 'T1AirBomber',
         Priority = 80,
         BuilderConditions = {
@@ -192,7 +234,7 @@ BuilderGroup {
         BuilderType = 'Air',
     },
     Builder {
-        BuilderName = 'MicroAI Factory Intie',
+        BuilderName = 'SCTAAI Factory Intie',
         PlatoonTemplate = 'T1AirFighter',
         Priority = 90,
         BuilderConditions = { -- Only make inties if the enemy air is strong.
@@ -204,11 +246,11 @@ BuilderGroup {
 }
 
 BuilderGroup {
-    BuilderGroupName = 'MicroAIPlatoonBuilder',
+    BuilderGroupName = 'SCTAAIPlatoonBuilder',
     BuildersType = 'PlatoonFormBuilder', -- A PlatoonFormBuilder is for builder groups of units.
     Builder {
-        BuilderName = 'MicroAI Land Attack',
-        PlatoonTemplate = 'MicroAILandAttack', -- The platoon template tells the AI what units to include, and how to use them.
+        BuilderName = 'SCTAAI Land Attack',
+        PlatoonTemplate = 'SCTAAILandAttack', -- The platoon template tells the AI what units to include, and how to use them.
         Priority = 100,
         InstanceCount = 200,
         BuilderType = 'Any',
@@ -220,7 +262,7 @@ BuilderGroup {
         BuilderConditions = { },
     },
     Builder {
-        BuilderName = 'MicroAI Air Attack',
+        BuilderName = 'SCTAAI Air Attack',
         PlatoonTemplate = 'BomberAttack',
         Priority = 100,
         InstanceCount = 2,
@@ -228,7 +270,7 @@ BuilderGroup {
         BuilderConditions = { },
     },
     Builder {
-        BuilderName = 'MicroAI Air Intercept',
+        BuilderName = 'SCTAAI Air Intercept',
         PlatoonTemplate = 'AntiAirHunt',
         Priority = 100,
         InstanceCount = 200,

@@ -1,5 +1,5 @@
 --[[
-    File    :   /lua/AI/AIBaseTemplates/MicroAI.lua
+    File    :   /lua/AI/AIBaseTemplates/SCTAAI.lua
     Author  :   SoftNoob
     Summary :
         Lists AIs to be included into the lobby, see /lua/AI/CustomAIs_v2/SorianAI.lua for another example.
@@ -11,10 +11,10 @@ BaseBuilderTemplate {
     Builders = {
         -- List all our builder grous here
         'SCTAAICommanderBuilder',
-        --'MicroAIEngineerBuilder',
-        --'MicroAILandBuilder',
-        --'MicroAIAirBuilder',
-        --'MicroAIPlatoonBuilder',
+        'SCTAAIEngineerBuilder',
+        --'SCTAAILandBuilder',
+        --'SCTAAIAirBuilder',
+        --'SCTAAIPlatoonBuilder',
     },
     NonCheatBuilders = {
         -- Specify builders that are _only_ used by non-cheating AI (e.g. scouting)

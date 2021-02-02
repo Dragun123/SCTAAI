@@ -1,5 +1,5 @@
 --[[
-    File    :   /lua/AI/CustomAIs_v2/MicroAI.lua
+    File    :   /lua/AI/CustomAIs_v2/SCTAAI.lua
     Author  :   SoftNoob
     Summary :
         Lists AIs to be included into the lobby, see /lua/AI/CustomAIs_v2/SorianAI.lua for another example.
