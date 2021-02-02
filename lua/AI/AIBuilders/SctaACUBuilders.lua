@@ -18,7 +18,7 @@ BuilderGroup {
             },
         InstantCheck = true,
         BuilderType = 'Any',
-        PlatoonAddBehaviors = { 'CommanderBehaviorImproved' }, -- Add a behaviour to the Commander unit once its done with it's BO.
+        PlatoonAddBehaviors = {'CommanderBehaviorImproved'} --CommanderBehaviorSCTA -- Add a behaviour to the Commander unit once its done with it's BO.
         PlatoonAddFunctions = { {SAI, 'BuildOnce'}, }, -- Flag this builder to be only run once.
         BuilderData = {
             Construction = {

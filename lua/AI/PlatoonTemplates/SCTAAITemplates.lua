@@ -111,7 +111,7 @@ PlatoonTemplate {
             { 'armck', 1, 1, 'support', 'None' }
         },
         Core = {
-            { 'corck', 1, 1, 'support', 'None' }
+            { 'corcv', 1, 1, 'support', 'None' }
         },
     }
 }
