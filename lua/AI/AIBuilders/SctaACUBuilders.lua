@@ -58,7 +58,7 @@ BuilderGroup {
         Priority = 90,
         InstanceCount = 1,
         BuilderConditions = {
-            { EBC, 'LessThanEnergyTrendRNG', { 0.0 } },
+            { EBC, 'LessThanEnergyTrend', { 0.0 } },
             { UCBC, 'HaveLessThanUnitsWithCategory', { 1, categories.ENERGYPRODUCTION * categories.TECH2 }},
         },
         BuilderType = 'Any',
