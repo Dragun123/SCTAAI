@@ -14,11 +14,11 @@ local SAI = '/lua/ScenarioPlatoonAI.lua'
 local SBC = '/lua/editor/SorianBuildConditions.lua'
 
 BuilderGroup {
-    BuilderGroupName = 'MicroAICommanderBuilder', -- Globally unique key that the AI base template file uses to add the contained builders to your AI.
+    BuilderGroupName = 'SCTAAICommanderBuilder', -- Globally unique key that the AI base template file uses to add the contained builders to your AI.
     BuildersType = 'EngineerBuilder', -- The kind of builder this is.  One of 'EngineerBuilder', 'PlatoonFormBuilder', or 'FactoryBuilder'.
     -- The initial build order
     Builder {
-        BuilderName = 'MicroAI Initial Commander BO', -- Names need to be GLOBALLY unique.  Prefixing the AI name will help avoid name collisions with other AIs.
+        BuilderName = 'SCTAAI Initial Commander BO', -- Names need to be GLOBALLY unique.  Prefixing the AI name will help avoid name collisions with other AIs.
         PlatoonTemplate = 'CommanderBuilder', -- Specify what platoon template to use, see the PlatoonTemplates folder.
         Priority = 1000, -- Make this super high priority.  The AI chooses the highest priority builder currently available.
         BuilderConditions = { -- The build conditions determine if this builder is available to be used or not.
@@ -30,6 +30,7 @@ BuilderGroup {
         PlatoonAddFunctions = { {SAI, 'BuildOnce'}, }, -- Flag this builder to be only run once.
         BuilderData = {
             Construction = {
+                FactionIndex = 6,
                 BuildStructures = { -- The buildings to make
                     'T1LandFactory',
                     'T1EnergyProduction',

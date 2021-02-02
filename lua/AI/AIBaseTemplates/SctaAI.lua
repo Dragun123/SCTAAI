@@ -7,14 +7,14 @@
 ]]
 
 BaseBuilderTemplate {
-    BaseTemplateName = 'MicroAI',
+    BaseTemplateName = 'SCTAAI',
     Builders = {
         -- List all our builder grous here
-        'MicroAICommanderBuilder',
-        'MicroAIEngineerBuilder',
-        'MicroAILandBuilder',
-        'MicroAIAirBuilder',
-        'MicroAIPlatoonBuilder',
+        'SCTAAICommanderBuilder',
+        --'MicroAIEngineerBuilder',
+        --'MicroAILandBuilder',
+        --'MicroAIAirBuilder',
+        --'MicroAIPlatoonBuilder',
     },
     NonCheatBuilders = {
         -- Specify builders that are _only_ used by non-cheating AI (e.g. scouting)
@@ -27,8 +27,8 @@ BaseBuilderTemplate {
     
     FirstBaseFunction = function(aiBrain)
         local per = ScenarioInfo.ArmySetup[aiBrain.Name].AIPersonality
-        if per == 'microai' or per == 'microaicheat' then
-            return 1000, 'MicroAI'
+        if per == 'sctaai' or per == 'sctaaicheat' then
+            return 1000, 'SCTAAI'
         end
         return -1
     end,
