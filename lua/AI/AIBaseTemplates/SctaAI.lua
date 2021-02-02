@@ -10,11 +10,19 @@ BaseBuilderTemplate {
     BaseTemplateName = 'SCTAAI',
     Builders = {
         -- List all our builder grous here
+        -- ACU
         'SCTAAICommanderBuilder',
-        'SCTAAIEngineerBuilder',
+        
+        -- Unit Builders
         'SCTAAILandBuilder',
-        --'SCTAAIAirBuilder',
-        'SCTAAIPlatoonBuilder',
+        'SCTAAIAirBuilder',
+        'SCTAAILandFormers',
+        'SCTAAIAirFormers',
+        
+        -- Buildings etc
+        'SCTAAIEnergyBuilder',
+        'SCTAAIEngineerMassBuilder',
+        'SCTAAIFactoryBuilders',
     },
     NonCheatBuilders = {
         -- Specify builders that are _only_ used by non-cheating AI (e.g. scouting)
