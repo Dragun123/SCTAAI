@@ -12,9 +12,9 @@ BaseBuilderTemplate {
         -- List all our builder grous here
         'SCTAAICommanderBuilder',
         'SCTAAIEngineerBuilder',
-        --'SCTAAILandBuilder',
+        'SCTAAILandBuilder',
         --'SCTAAIAirBuilder',
-        --'SCTAAIPlatoonBuilder',
+        'SCTAAIPlatoonBuilder',
     },
     NonCheatBuilders = {
         -- Specify builders that are _only_ used by non-cheating AI (e.g. scouting)
