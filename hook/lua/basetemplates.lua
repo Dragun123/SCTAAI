@@ -2,6 +2,8 @@ BaseTemplates[6] = {
     {
         {
         'T1EnergyProduction',
+        'T1EnergyProduction2',
+        'T1EnergyProduction3',
         'MassStorage',
         'EnergyStorage',
         'T1MassCreation',
@@ -972,7 +974,9 @@ BaseTemplates[6] = {
         'T3AADefense',
         'T2MissileDefense',
         'T1LandFactory',
+        'T1LandFactory2',
         'T2LandFactory',
+        'T2LandFactory2',
         'T3LandFactory',
         'T3QuantumGate',
         'T1AirFactory',
@@ -1932,6 +1936,8 @@ BaseTemplates[7] = {
     {
         {
         'T1EnergyProduction',
+        'T1EnergyProduction2',
+        'T1EnergyProduction3',
         'MassStorage',
         'EnergyStorage',
         'T1MassCreation',
@@ -2902,7 +2908,9 @@ BaseTemplates[7] = {
         'T3AADefense',
         'T2MissileDefense',
         'T1LandFactory',
+        'T1LandFactory2',
         'T2LandFactory',
+        'T2LandFactory2',
         'T3LandFactory',
         'T3QuantumGate',
         'T1AirFactory',

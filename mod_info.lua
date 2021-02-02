@@ -14,7 +14,5 @@ requires = { }
 requiresNames = { }
 conflicts = { }
 before = { }
-after = { 
-    "SCTAFIX-AC75-22EA-A7CA-D6DA9300g8a9",
-    "SCTABALANCE-AC75-225f-5i47-b27h1c6636a9"
+after = {
 }
