@@ -133,6 +133,10 @@ BuilderGroup {
         Priority = 90,
         InstanceCount = 1,
         BuilderConditions = {
+<<<<<<< HEAD
+=======
+            { EBC, 'LessThanEnergyTrend', { 0.0 } },
+>>>>>>> refs/remotes/relent0r/master
             { UCBC, 'HaveLessThanUnitsWithCategory', { 1, categories.ENERGYPRODUCTION * categories.TECH2 }},
            --- { MIBC, 'IsFactionCat', { 'CORE', }},
         },
